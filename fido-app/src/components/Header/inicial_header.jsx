@@ -5,17 +5,28 @@ import {useNavigate} from 'react-router-dom'
 import PetsRoundedIcon from '@mui/icons-material/PetsRounded';
 
 function Inicial_Header() {
+    const navigate=useNavigate()
+    const LogInPage=()=>{
+        navigate('/login')
+    }
+    const indexPage=()=>{
+        navigate('/')
+    }
+    const registerPage=()=>{
+        navigate('/')
+    }
+
   return (
     <React.Fragment>
         <CssBaseline/>
         <AppBar color='default' className='AppBar'>
             <Toolbar>
                 <PetsRoundedIcon className='petsIcon'/>
-                <Typography style={{flexGrow:1,fontWeight:'bold'}}>
+                <Typography style={{flexGrow:1,fontWeight:'bold', cursor:'pointer'}} onClick={()=>indexPage()}>
                     FIDO
                 </Typography>
                 <Button variant='contained' style={{textTransform:'none', backgroundColor:'#8C30F5', marginRight:'1rem', borderRadius:'0.5rem'}}>Registrarse</Button>
-                <Button variant='contained' style={{textTransform:'none', backgroundColor:'#F1E4FF',color:'#8C30F5', borderRadius:'0.5rem'}}>Iniciar</Button>
+                <Button variant='contained' style={{textTransform:'none', backgroundColor:'#F1E4FF',color:'#8C30F5', borderRadius:'0.5rem'}} onClick={()=>LogInPage()}>Iniciar</Button>
             </Toolbar>
             <div className='primaryContainer'>
                 <div  className='AppServices'>
