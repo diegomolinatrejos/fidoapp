@@ -1,11 +1,16 @@
 import React from 'react'
 import './style.css'
 import Footer from '../Footer'
+import Inicial_Header from '../Header/inicial_header'
 
 
 function Principal_Index() {
   return (
-    <Footer/>
+    <React.Fragment>
+      <Inicial_Header/>
+      <Footer/>
+    </React.Fragment>
+    
   )
 }
 
