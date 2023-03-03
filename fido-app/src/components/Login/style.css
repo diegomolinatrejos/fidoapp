@@ -19,11 +19,6 @@
     color:#000
 }
 
-.inputText{
-    border-color: red;
-}
-
-
 @media only screen and (max-width:400px){
     .container{
         margin: 4rem 2rem 2rem 2rem;
