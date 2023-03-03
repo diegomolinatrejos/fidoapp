@@ -5,8 +5,12 @@ import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
 import PetsRoundedIcon from '@mui/icons-material/PetsRounded';
 import Footer from '../Footer'
 import {useNavigate} from 'react-router-dom'
+import GoogleAuthentication from '../GoogleAuthentication/googleAuthentication';
+
 
 function Login() {
+    
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate=useNavigate()
@@ -55,7 +59,8 @@ function Login() {
                     >Iniciar Sesión</Button>
                 </form>
                 <a  href='/' style={{textDecoration:'none', color:'#fdb44b', margin:'15px', fontWeight:'bold', fontSize:'14px'}}>¿Olvidó su contraseña?</a>
-            </div>  
+            </div>
+            <GoogleAuthentication/>
         </Container>
       </Grid>
       <Footer/>
