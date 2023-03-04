@@ -39,3 +39,15 @@
     box-shadow: none;
     animation: none;
 }
+.divSlideBar{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.iconButton{
+    display: none;
+}
+@media only screen and (max-width:460px){
+
+}
