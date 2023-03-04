@@ -1,5 +1,4 @@
 import React from 'react'
-import './style.css'
 import Footer from '../Footer'
 import Inicial_Header from '../Header/inicial_header'
 
