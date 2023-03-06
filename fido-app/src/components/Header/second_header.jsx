@@ -1,12 +1,15 @@
 import React,{useState} from 'react'
 import './style.css'
-import { AppBar, Toolbar,CssBaseline, IconButton, Typography, Button, Paper, Drawer, Divider, Avatar} from '@mui/material'
+import { AppBar, Toolbar,CssBaseline, IconButton, Typography, Button, Paper, Drawer, Divider, Avatar, useMediaQuery} from '@mui/material'
 import {useNavigate} from 'react-router-dom'
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import PetsRoundedIcon from '@mui/icons-material/PetsRounded';
 
+
 function Logged_Header() {
+    const matchesIcon=useMediaQuery('(max-width: 400px)')
+    const matchesLogOut=useMediaQuery('(min-width: 400px)')
     const navigate=useNavigate()
     const LogOut=()=>{
         navigate('/')
@@ -28,33 +31,16 @@ function Logged_Header() {
                 <Typography style={{flexGrow:1,fontWeight:'bold', cursor:'pointer'}} onClick={()=>indexPage()}>
                     FIDO
                 </Typography>
-                <Button variant='text' style={{textTransform:'none', borderRadius:'1.3rem', color:'#8C30F5', fontSize:'1rem', fontWeight:'bold'}} onClick={()=>LogOut()}>Cerrar Sesión</Button>
-                <IconButton style={{display:'none'}}>
-                    <LogoutOutlinedIcon style={{color:'#8C30F5'}}/>
-                </IconButton>
-            </Toolbar>
-            <div className='primaryContainer'>
-                <div  className='AppServices'>
-                <Button variant='text'color='inherit' style={{borderRadius:'1.2rem', textTransform:'none', margin:'0 1rem', fontWeight:'bold'}} autoFocus className='buttonServices'  >
-                    Hotel
-                </Button>
-                <Button variant='text'color='inherit' style={{borderRadius:'1.2rem', textTransform:'none', margin:'0 1rem', fontWeight:'bold'}} className='buttonServices'  >
-                    Grooming
-                </Button>
-                <Button variant='text'color='inherit' style={{borderRadius:'1.2rem', textTransform:'none', margin:'0 1rem', fontWeight:'bold'}} className='buttonServices'  >
-                    Entrenamiento
-                </Button>
-                <Button variant='text'color='inherit' style={{borderRadius:'1.2rem', textTransform:'none', margin:'0 1rem', fontWeight:'bold'}} className='buttonServices'  >
-                    Guardería
-                </Button>
-                <Button variant='text'color='inherit' style={{borderRadius:'1.2rem', textTransform:'none', margin:'0 1rem', fontWeight:'bold'}} className='buttonServices'  >
-                    Veterinaria
-                </Button>
-                <Button variant='text'color='inherit' style={{borderRadius:'1.2rem', textTransform:'none', margin:'0 1rem', fontWeight:'bold'}} className='buttonServices'  >
-                    Comida
-                </Button>
-                </div>
-            </div>
+                {matchesLogOut &&(
+                    <Button variant='text' style={{textTransform:'none', borderRadius:'1.3rem', color:'#8C30F5', fontSize:'1rem', fontWeight:'bold'}} onClick={()=>LogOut()}>Cerrar sesión</Button>
+                )}
+                
+                {matchesIcon && (
+                    <IconButton>
+                        <LogoutOutlinedIcon style={{color:'#8C30F5'}} onClick={()=>LogOut()} />
+                    </IconButton>
+                )}
+            </Toolbar>  
         </AppBar>
         <Drawer anchor='left' open={open} onClose={()=>setOpen(false)}>
             <Paper elevation={0} style={{width:'150px',backgroundColor: '#75E3EA'}}>
