@@ -69,6 +69,18 @@ export const listGrooming=[
     }
 ]
 
+export const listVeterinaria=[
+    {imgSrc:[
+        "https://i.pinimg.com/564x/18/5e/3c/185e3cacd1dc7b2d3ad3cc6b18787f6f.jpg",
+        "https://i.pinimg.com/564x/c9/56/46/c956467fe629597096202dddd9c5903b.jpg",
+        "https://i.pinimg.com/564x/b2/e6/32/b2e6322e41316ba9cf1b30cf698c0352.jpg"
+    ],
+    title:"Veterinaria Home",
+    price:null,
+    descripcion:"Alajuela"
+    }
+]
+
 export const listEntrenamiento=[
     {imgSrc:[
         "https://i.pinimg.com/564x/43/d8/2f/43d82f4529b8af1b48690093362d8fa0.jpg",
