@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../Footer'
 import Inicial_Header from '../Header/inicial_header'
 import AppServices from '../AppServices'
+import CardsApp from '../Cards/CardsApp'
 
 
 function Principal_Index() {
@@ -9,7 +10,9 @@ function Principal_Index() {
     <React.Fragment>
       <Inicial_Header/>
       <AppServices/>
+      <CardsApp/>
       <Footer/>
+      
     </React.Fragment>
     
   )
