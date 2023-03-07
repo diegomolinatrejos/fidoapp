@@ -3,6 +3,7 @@ import Footer from '../Footer'
 import Inicial_Header from '../Header/inicial_header'
 import AppServices from '../AppServices'
 import CardsApp from '../Cards/CardsApp'
+import PruebaFormulario from '../PruebaFormulario' 
 
 
 function Principal_Index() {
@@ -12,7 +13,6 @@ function Principal_Index() {
       <AppServices/>
       <CardsApp/>
       <Footer/>
-      
     </React.Fragment>
     
   )
