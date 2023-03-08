@@ -23,7 +23,7 @@ function Cards({card}) {
                 pagination
                 navigation={true}
                 modules={[Pagination,Navigation]}
-                className='swiperContainer'>
+                className='swiperContainer' style={{zIndex:0}}>
                   { card.imgSrc.map((src,i)=>(
                 <SwiperSlide key={i}>
                     <img src={src} className='cardImg' />
