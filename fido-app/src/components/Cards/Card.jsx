@@ -13,7 +13,7 @@ function Cards({card}) {
 
   return (
       <div className='cardBox'>
-        <Card style={{borderRadius:'1.2rem', marginRight:'0.5rem', boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.25)'}} >
+        <Card style={{borderRadius:'1.2rem', marginRight:'0.5rem',marginBottom:'1rem', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.5)'}} >
           <CardContent style={{padding:'0.6rem 0.7rem 0.2rem 0.7rem'}}>
             <Swiper slidesPerView={1}
                 spaceBetween={30}

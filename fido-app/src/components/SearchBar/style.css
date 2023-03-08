@@ -65,8 +65,9 @@
     color: #000 !important;
     width: 4rem;
     background-color: #EBEBEB;
-    padding-bottom: 0.1rem;
+    margin-bottom: 0.3rem;
     cursor: pointer;
+    height: 1.5rem;
 }
 
 .popperPicker{
@@ -130,8 +131,9 @@ color: #000;
         color: #000 !important;
         width: 3rem;
         background-color: #EBEBEB;
-        padding-bottom: 0.05rem;
+        margin-bottom: 0.3rem;
         cursor: pointer;
+        height: 1rem;
 
     }
     .divBucador{
@@ -195,8 +197,9 @@ color: #000;
         color: #000 !important;
         width: 3rem;
         background-color: #EBEBEB;
-        padding-bottom: 0.05rem;
+        margin-bottom: 0.3rem;
         cursor: pointer;
+        height: 1rem;
 
     }
     .divBucador{
