@@ -68,10 +68,12 @@
     margin-bottom: 0.3rem;
     cursor: pointer;
     height: 1.5rem;
+    
 }
 
 .popperPicker{
     max-width: 98%;
+    z-index: 100;
 }
 
 
@@ -92,9 +94,6 @@ justify-content: space-evenly;
 }
 .react-datepicker__day,
 .react-datepicker__time-name {
-/* display: flex;
-justify-content: center;
-align-items: center; */
 border-radius: 50%;
 background-color: #ecebed;
 }
