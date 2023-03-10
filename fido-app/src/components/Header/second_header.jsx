@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom'
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import PetsRoundedIcon from '@mui/icons-material/PetsRounded';
+import ListaSlideBar from '../ListaSlideBar';
 
 
 function Logged_Header() {
@@ -43,15 +44,17 @@ function Logged_Header() {
             </Toolbar>  
         </AppBar>
         <Drawer anchor='left' open={open} onClose={()=>setOpen(false)}>
-            <Paper elevation={0} style={{width:'150px',backgroundColor: '#75E3EA'}}>
+            <Paper elevation={0} style={{width:'220px',backgroundColor: '#75E3EA'}}>
                 <div className='divSlideBar'>
                 <IconButton edge='start' color='inherit' onClick={()=>setOpen(false)} >
                         <MenuOutlinedIcon/>
                     </IconButton>
-                    <Avatar style={{marginLeft:'3.3rem'}} alt='' src=''/>
+                    <Avatar style={{marginLeft:'7.3rem'}} alt='' src=''/>
                 </div>
+                
                 <Divider/>
             </Paper>
+            <ListaSlideBar/>
         </Drawer>
     </React.Fragment>
   )
