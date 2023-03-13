@@ -4,6 +4,7 @@ import { BrowserRouter, Routes ,Route } from 'react-router-dom'
 import Principal_Index  from './components/Principal_Index'
 import Login from './components/Login'
 import Registered_index from './components/Principal_Index/registered_index'
+import CrearRegistroRapido from './components/RegistroRapido/crearRegistroRapido'
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
           <Route path='/' name='index'element={<Principal_Index/>} />
           <Route path='/login' name='login' element={<Login/>} />
           <Route path='/app' name='logged-indez' element={<Registered_index/>} />
+          <Route path='/registrar' name='registrar' element={<CrearRegistroRapido/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

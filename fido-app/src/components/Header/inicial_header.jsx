@@ -13,7 +13,7 @@ function Inicial_Header() {
         navigate('/')
     }
     const registerPage=()=>{
-        navigate('/')
+        navigate('/registrar')
     }
 
   return (
@@ -25,7 +25,7 @@ function Inicial_Header() {
                 <Typography style={{flexGrow:1,fontWeight:'bold', cursor:'pointer'}} onClick={()=>indexPage()}>
                     FIDO
                 </Typography>
-                <Button variant='contained' style={{textTransform:'none', backgroundColor:'#8C30F5', marginRight:'1rem', borderRadius:'0.5rem'}}>Registrar</Button>
+                <Button variant='contained' style={{textTransform:'none', backgroundColor:'#8C30F5', marginRight:'1rem', borderRadius:'0.5rem'}} onClick={()=>registerPage()}>Registrar</Button>
                 <Button variant='contained' style={{textTransform:'none', backgroundColor:'#F1E4FF',color:'#8C30F5', borderRadius:'0.5rem'}} onClick={()=>LogInPage()}>Iniciar</Button>
             </Toolbar>
         </AppBar>
