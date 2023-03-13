@@ -45,7 +45,7 @@ function Login() {
             </div>
             <div className='divTitulos'>
                 <Typography component='h1' variant='h5' style={{fontSize:'2.2rem', height:'40px', fontWeight:'700', color:'#8C30F5',fontFamily:[ 'Source Sans Pro','sans-serif']}}>Inicio de sesión</Typography>
-                <p style={{margin:'10px 0px 0px 0px', fontSize:'14px'}}>¿Aún no tienes cuenta? <a href='/' path='/' style={{textDecoration:'none', color:'#fdb44b',fontWeight:'bold'}}>Regístrate</a></p>
+                <p style={{margin:'10px 0px 0px 0px', fontSize:'14px'}}>¿Aún no tienes cuenta? <a href='/registrar' path='/registrar' style={{textDecoration:'none', color:'#fdb44b',fontWeight:'bold'}}>Regístrate</a></p>
             </div> 
             <div className='divLogo' style={{marginTop:'2px', marginBottom:'0.2rem'}}>
                 <form className='form'>
