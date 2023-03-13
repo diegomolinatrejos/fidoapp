@@ -66,6 +66,30 @@ export const listGrooming=[
     title:"Entrenamiento",
     price:5000,
     descripcion:"Cachorros y adultos"
+    },{imgSrc:[
+        "https://i.pinimg.com/564x/5a/b3/3b/5ab33b360dbdc5788a256421ef4f7346.jpg",
+        "https://i.pinimg.com/564x/04/6c/a0/046ca0dc65a40a0bd9977c45eadea23a.jpg",
+        "https://i.pinimg.com/564x/ad/8e/19/ad8e199fa41d5d2790029b0a5bcc614d.jpg"
+    ],
+    title:"Entrenamiento",
+    price:5000,
+    descripcion:"Cachorros y adultos"
+    },{imgSrc:[
+        "https://i.pinimg.com/564x/5a/b3/3b/5ab33b360dbdc5788a256421ef4f7346.jpg",
+        "https://i.pinimg.com/564x/04/6c/a0/046ca0dc65a40a0bd9977c45eadea23a.jpg",
+        "https://i.pinimg.com/564x/ad/8e/19/ad8e199fa41d5d2790029b0a5bcc614d.jpg"
+    ],
+    title:"Entrenamiento",
+    price:5000,
+    descripcion:"Cachorros y adultos"
+    },{imgSrc:[
+        "https://i.pinimg.com/564x/5a/b3/3b/5ab33b360dbdc5788a256421ef4f7346.jpg",
+        "https://i.pinimg.com/564x/04/6c/a0/046ca0dc65a40a0bd9977c45eadea23a.jpg",
+        "https://i.pinimg.com/564x/ad/8e/19/ad8e199fa41d5d2790029b0a5bcc614d.jpg"
+    ],
+    title:"Entrenamiento",
+    price:5000,
+    descripcion:"Cachorros y adultos"
     }
 ]
 
@@ -78,11 +102,51 @@ export const listVeterinaria=[
     title:"Veterinaria Home",
     price:null,
     descripcion:"Alajuela"
+    },{imgSrc:[
+        "https://i.pinimg.com/564x/18/5e/3c/185e3cacd1dc7b2d3ad3cc6b18787f6f.jpg",
+        "https://i.pinimg.com/564x/c9/56/46/c956467fe629597096202dddd9c5903b.jpg",
+        "https://i.pinimg.com/564x/b2/e6/32/b2e6322e41316ba9cf1b30cf698c0352.jpg"
+    ],
+    title:"Veterinaria Home",
+    price:null,
+    descripcion:"Alajuela"
+    },{imgSrc:[
+        "https://i.pinimg.com/564x/18/5e/3c/185e3cacd1dc7b2d3ad3cc6b18787f6f.jpg",
+        "https://i.pinimg.com/564x/c9/56/46/c956467fe629597096202dddd9c5903b.jpg",
+        "https://i.pinimg.com/564x/b2/e6/32/b2e6322e41316ba9cf1b30cf698c0352.jpg"
+    ],
+    title:"Veterinaria Home",
+    price:null,
+    descripcion:"Alajuela"
+    },{imgSrc:[
+        "https://i.pinimg.com/564x/18/5e/3c/185e3cacd1dc7b2d3ad3cc6b18787f6f.jpg",
+        "https://i.pinimg.com/564x/c9/56/46/c956467fe629597096202dddd9c5903b.jpg",
+        "https://i.pinimg.com/564x/b2/e6/32/b2e6322e41316ba9cf1b30cf698c0352.jpg"
+    ],
+    title:"Veterinaria Home",
+    price:null,
+    descripcion:"Alajuela"
     }
 ]
 
 export const listEntrenamiento=[
     {imgSrc:[
+        "https://i.pinimg.com/564x/43/d8/2f/43d82f4529b8af1b48690093362d8fa0.jpg",
+        "https://i.pinimg.com/564x/8b/25/16/8b251600c3c199184ca5005031628acc.jpg",
+        "https://i.pinimg.com/564x/b7/3f/f1/b73ff1f8353da0258e19b21d26a6eeed.jpg"
+    ],
+    title:"Entrenamiento",
+    price:5000,
+    descripcion:"Cachorros y adultos"
+    },{imgSrc:[
+        "https://i.pinimg.com/564x/43/d8/2f/43d82f4529b8af1b48690093362d8fa0.jpg",
+        "https://i.pinimg.com/564x/8b/25/16/8b251600c3c199184ca5005031628acc.jpg",
+        "https://i.pinimg.com/564x/b7/3f/f1/b73ff1f8353da0258e19b21d26a6eeed.jpg"
+    ],
+    title:"Entrenamiento",
+    price:5000,
+    descripcion:"Cachorros y adultos"
+    },{imgSrc:[
         "https://i.pinimg.com/564x/43/d8/2f/43d82f4529b8af1b48690093362d8fa0.jpg",
         "https://i.pinimg.com/564x/8b/25/16/8b251600c3c199184ca5005031628acc.jpg",
         "https://i.pinimg.com/564x/b7/3f/f1/b73ff1f8353da0258e19b21d26a6eeed.jpg"
