@@ -7,13 +7,14 @@ import { CssBaseline, Grid, Container, AppBar, Toolbar, IconButton, Typography, 
 import PetsRoundedIcon from '@mui/icons-material/PetsRounded';
 import PersonAddRoundedIcon from '@mui/icons-material/PersonAddRounded';
 import {useNavigate} from 'react-router-dom'
+import './style.css';
 
 const CrearRegistroRapido = () => {
   const navigate=useNavigate()
     const indexPage=()=>{
         navigate('/')
     }
-    const errorClassName = 'text-danger fs-5';
+    
     return (
       <React.Fragment>
        <Grid container component='main' style={{backgroundColor:'#36949D',backgroundSize:'cover',backgroundPosition:'center',  height:'auto', flexWrap:'nowrap',}}>
@@ -73,27 +74,27 @@ const CrearRegistroRapido = () => {
               
                   <label htmlFor="firstName">Nombre</label>
                   <Field type="text" name="firstName" className="form-control" />
-                  <ErrorMessage name="firstName"  className='error-message' />
+                  <ErrorMessage name="firstName" className='error-message'>{msg => <div className='error-message'>{msg}</div>}</ErrorMessage>
 
                   <label htmlFor="lastName">Apellidos</label>
                   <Field type="text" name="lastName" className="form-control" />
-                  <ErrorMessage name="lastName" className="text-danger" />
+                  <ErrorMessage name="lastName" className='error-message'>{msg => <div className='error-message'>{msg}</div>}</ErrorMessage>
                   
                   <label htmlFor="email">Correo electrónico</label>
                   <Field type="email" name="email" className="form-control" />
-                  <ErrorMessage name="email" className="text-danger" />
+                  <ErrorMessage name="email" className='error-message'>{msg => <div className='error-message'>{msg}</div>}</ErrorMessage>
                 
       
                 
                   <label htmlFor="password">Contraseña</label>
                   <Field type="password" name="password" className="form-control" />
-                  <ErrorMessage name="password" className="text-danger" />
+                  <ErrorMessage name="password" className='error-message'>{msg => <div className='error-message'>{msg}</div>}</ErrorMessage>
                 
       
                 
                   <label htmlFor="confirmPassword">Confirmar contraseña</label>
                   <Field type="password" name="confirmPassword" className="form-control" />
-                  <ErrorMessage name="confirmPassword" className="text-danger" />
+                  <ErrorMessage name="confirmPassword" className='error-message'>{msg => <div className='error-message'>{msg}</div>}</ErrorMessage>
 
                 <button type="submit">
                   REGISTRARSE
