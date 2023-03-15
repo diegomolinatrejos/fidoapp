@@ -12,19 +12,37 @@ import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
 import StoreRoundedIcon from '@mui/icons-material/StoreRounded';
+import PetsRoundedIcon from '@mui/icons-material/PetsRounded';
+import ConfirmationNumberRoundedIcon from '@mui/icons-material/ConfirmationNumberRounded';
 import AppRegistrationRoundedIcon from '@mui/icons-material/AppRegistrationRounded';
 import ReceiptRoundedIcon from '@mui/icons-material/ReceiptRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+import BookOnlineRoundedIcon from '@mui/icons-material/BookOnlineRounded';
+import SupervisorAccountRoundedIcon from '@mui/icons-material/SupervisorAccountRounded';
+import GroupsRoundedIcon from '@mui/icons-material/GroupsRounded';
+import DomainRoundedIcon from '@mui/icons-material/DomainRounded';
+import {useNavigate} from 'react-router-dom'
 
 function ListaSlideBar() {
+  const navigate=useNavigate()
+  const LogOut=()=>{
+    navigate('/')
+  }
+  const Pets=()=>{
+    navigate('/pets')
+  }
     const [openProfile, setOpenProfile] = React.useState(false);
     const [openNegocio, setOpenNegocio] = React.useState(false);
+    const [openAdmin, setOpenAdmin] = React.useState(false);
 
   const handleClickProfile = () => {
     setOpenProfile(!openProfile);
   };
   const handleClickNegocio = () => {
     setOpenNegocio(!openNegocio);
+  };
+  const handleClickAdmin = () => {
+    setOpenAdmin(!openAdmin);
   };
   return (
     <List
@@ -52,12 +70,20 @@ function ListaSlideBar() {
             </ListItemIcon>
             <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Editar perfil" />
             </ListItemButton>
+
+            <ListItemButton sx={{ pl: 3 }} onClick={()=>Pets()}>
+            <ListItemIcon>
+                <PetsRoundedIcon sx={{ fontSize: '20px'}} />
+            </ListItemIcon>
+            <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Mis mascotas" />
+            </ListItemButton>
             <ListItemButton sx={{ pl: 3 }}>
             <ListItemIcon>
-                <AddCircleOutlineRoundedIcon sx={{ fontSize: '20px'}} />
+                <ConfirmationNumberRoundedIcon sx={{ fontSize: '20px'}} />
             </ListItemIcon>
-            <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Añadir mascota" />
+            <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Mis reservas" />
             </ListItemButton>
+            
         </List>
         </Collapse>
 
@@ -78,14 +104,54 @@ function ListaSlideBar() {
             </ListItemButton>
             <ListItemButton sx={{ pl: 3 }}>
             <ListItemIcon>
+                <AddCircleOutlineRoundedIcon sx={{ fontSize: '20px'}} />
+            </ListItemIcon>
+            <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Gestión de servicios" />
+            </ListItemButton>
+            <ListItemButton sx={{ pl: 3 }}>
+            <ListItemIcon>
+                <BookOnlineRoundedIcon sx={{ fontSize: '20px'}} />
+            </ListItemIcon>
+            <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Gestión de reservas" />
+            </ListItemButton>
+            <ListItemButton sx={{ pl: 3 }}>
+            <ListItemIcon>
                 <ReceiptRoundedIcon sx={{ fontSize: '20px'}} />
             </ListItemIcon>
             <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Gestión de promociones" />
             </ListItemButton>
+           
         </List>
         </Collapse>
+
+
+        <ListItemButton onClick={handleClickAdmin}>
+        <ListItemIcon>
+            <SupervisorAccountRoundedIcon sx={{ fontSize: '25px'}}/>
+        </ListItemIcon>
+        <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Administración" />
+        {openAdmin ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={openAdmin} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 3 }}>
+            <ListItemIcon>
+                <GroupsRoundedIcon sx={{ fontSize: '20px'}} />
+            </ListItemIcon>
+            <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Clientes" />
+            </ListItemButton>
+            <ListItemButton sx={{ pl: 3 }}>
+            <ListItemIcon>
+                <DomainRoundedIcon sx={{ fontSize: '20px'}} />
+            </ListItemIcon>
+            <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Negocios" />
+            </ListItemButton>
+          </List>
+        </Collapse>
+
+
         <Box sx={{ position: 'fixed', bottom: 0, left: 0, width: '220px', marginBottom: 1 }}>
-        <ListItemButton>
+        <ListItemButton onClick={()=>LogOut()}>
             <ListItemIcon>
                 <LogoutRoundedIcon sx={{ fontSize: '20px'}} />
             </ListItemIcon>

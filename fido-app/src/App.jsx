@@ -5,6 +5,7 @@ import Principal_Index  from './components/Principal_Index'
 import Login from './components/Login'
 import Registered_index from './components/Principal_Index/registered_index'
 import CrearRegistroRapido from './components/RegistroRapido/crearRegistroRapido'
+import Mascotas from './components/Mascotas'
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           <Route path='/login' name='login' element={<Login/>} />
           <Route path='/app' name='logged-indez' element={<Registered_index/>} />
           <Route path='/registrar' name='registrar' element={<CrearRegistroRapido/>}/>
+          <Route path='/pets' name='pets' element={<Mascotas/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>
