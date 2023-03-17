@@ -47,14 +47,27 @@ const ContendorModal=styled.div`
     border-radius: 0.8rem;
     box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
     padding:20px;
+    margin-top:3rem;
+    
     @media only screen and (max-width: 850px) {
+        /* Estilos para el scrollbar */
+        ::-webkit-scrollbar {
+            display:none;
+            
+        }
         //width: 85%;
+        overflow-y: auto;
+        max-height: 600px;
       }
     @media only screen and (max-width: 650px) {
     //width: 90%;
+        overflow-y: auto;
+        max-height: 600px;
     }
     @media only screen and (max-width: 500px) {
     //width: 95%;
+        overflow-y: auto;
+        max-height: 600px;
     }
 `;
 
