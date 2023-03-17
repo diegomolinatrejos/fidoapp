@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './style.css';
 import { Card, CardActions, CardContent, Button, Typography, Avatar } from '@mui/material';
+import Modal from '../Modal/modal'
+import styled from 'styled-components';
 
 function MascotaList() {
+  const [estadoModal, setEstadoModal]=useState(false);
   const [cards, setCards] = useState([{
     imgPet:'https://i.pinimg.com/564x/fa/f6/89/faf6893660ada52c7f49c755fcbb9b93.jpg',
     name:'Tyson',
@@ -87,10 +90,10 @@ function MascotaList() {
     duennoApellidos2:'Gómez Rodríguez',
     telefono2:'70757181',
     direccion:'Grecia, Alajuela'
-}]); // aquí iría tu lista de tarjetas
+}]); 
 
   return (
-    <div>
+    <React.Fragment>
       <div style={{ width: '100%' }}>
         <Button
           variant='contained'
@@ -100,7 +103,7 @@ function MascotaList() {
             color: '#8C30F5',
             fontWeight: 600,
             textTransform: 'none',
-          }}
+          }} onClick={()=>setEstadoModal(!estadoModal)}
         >
           Añadir mascota
         </Button>
@@ -134,7 +137,7 @@ function MascotaList() {
                     <CardActions>
                     <Button
                         size='small'
-                        style={{ color: '#8C30F5', backgroundColor: '#F1E4FF', fontWeight: 600, borderRadius: '0.5rem' }}
+                        style={{ color: '#8C30F5', backgroundColor: '#F1E4FF', fontWeight: 600, borderRadius: '0.5rem' }} onClick={()=>setEstadoModal(!estadoModal)}
                     >
                         Detalles
                     </Button>
@@ -143,9 +146,77 @@ function MascotaList() {
                 ))}
             </div>
       </div>
+      <Modal style={{zIndex:100}}
+      estado={estadoModal} 
+      modifcarEstadoModal={setEstadoModal}>
+        <Contenido>
+          <ContenidoIntermedio>
+            <FotoPerfil>
+              <h3>FOTO</h3>
+            </FotoPerfil>
+            <Formulario>
+              <h4>Formulario</h4>
+              <h4>Formulario</h4>
+              <h4>Formulario</h4>
+              <h4>Formulario</h4>
+              <h4>Formulario</h4>
+              <h4>Formulario</h4>
+              <h4>Formulario</h4>
+              <h4>Formulario</h4>
+            </Formulario>
+          </ContenidoIntermedio>
+          <ContenidoIntermedio>
+            <button>Editar</button>
+            <button>Eliminar</button>
+          </ContenidoIntermedio>
+
+        </Contenido>
+      </Modal>
       
-    </div>
+    </React.Fragment>
   );
 }
 
 export default MascotaList;
+
+const Contenido=styled.div`
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  width: 98%;
+
+  @media only screen and (max-width: 465px) {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items: center;
+  }
+`;
+const ContenidoIntermedio=styled.div`
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+  align-items: center;
+  @media only screen and (max-width: 465px) {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items: center;
+  }
+`;
+const FotoPerfil=styled.div`
+  display:flex; 
+  justify-content:center;
+  align-items: center;
+  width: 50%;
+  margin:0.2rem 0.5rem 0.2rem 0.5rem;
+`;
+const Formulario=styled.div`
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  width: 50%;
+  margin:0.2rem 0.5rem 0.2rem 0.5rem;
+`;

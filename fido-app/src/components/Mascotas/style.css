@@ -4,7 +4,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 7rem;
     /* overflow-x: auto; */
@@ -14,13 +14,15 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap:0.7rem;
     z-index: 0;
     margin-left: 1.5rem;
+    max-height: fit-content;
+    
 }
 
-@media only screen and (max-width:835px){
+@media only screen and (max-width:860px){
     .cardsFlexMascotas{
         display: flex;
         justify-content: flex-start;
@@ -28,6 +30,22 @@
         flex-wrap: nowrap;
         gap: 1rem;
         overflow-x: auto;
+        
+    }
+    .cardBoxMascota{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap:0.7rem;
+        z-index: 0;
+        margin-left: 1.5rem;
+        max-height: fit-content;
+        
+    }
+    ::-webkit-scrollbar {
+        display:none;
+        
     }
     
 }
