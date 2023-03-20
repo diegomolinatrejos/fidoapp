@@ -21,21 +21,20 @@ const CargarAvatar = ({ onImageChange }) => {
 
   return (
     <div className='AvatarIcon'>
-      <input type="file" accept="image/*" className='avatarInput'  onChange={handleImageChange} />
-      {image ? (
-        <AvatarEditor
-          ref={(editor) => setEditor(editor)}
-          image={image}
-          width={120}
-          height={120}
-          border={50}
-          color={[255, 255, 255, 0.5]}
-          scale={1}
-          rotate={0}
-        />
-      ) : (
-        <div><p>Seleccionar imagen</p></div>
-      )}
+      <input type="file" accept="image/*" className='avatarInput' onChange={handleImageChange} placeholder="aqui imagen" title="imagen aqui"/>
+      {image && (
+  <AvatarEditor
+    ref={(editor) => setEditor(editor)}
+    image={image}
+    width={120}
+    height={120}
+    border={50}
+    color={[255, 255, 255, 0.5]}
+    scale={1}
+    rotate={0}
+  />
+)}
+
       {image && (
       
         <button onClick={handleSave}>Guardar imagen</button>

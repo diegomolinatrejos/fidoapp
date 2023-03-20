@@ -18,12 +18,6 @@
 .AvatarIcon button:hover{
     background-color: #d8cbe9;
 }
-p{
-    font-size: 0.7rem;
-    font-weight: 550;
-    margin: 2px 2px 2px 2px;
-    color: #737373;
-}
 
 .avatarInput{
     font-size: 0.6rem;
