@@ -48,6 +48,12 @@ const ContendorModal=styled.div`
     box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
     padding:20px;
     margin-top:3rem;
+    overflow-y: auto;
+    max-height: 620px;
+    ::-webkit-scrollbar {
+        display:none;
+        
+    }
     
     @media only screen and (max-width: 850px) {
         /* Estilos para el scrollbar */

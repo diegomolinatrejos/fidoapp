@@ -14,7 +14,7 @@ function Mascotas() {
      </div>
 
      <MascotaList/>
-     <Footer className='footer'/>
+     <Footer />
     </React.Fragment>
   )
 }
