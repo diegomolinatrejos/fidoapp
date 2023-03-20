@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AvatarEditor from 'react-avatar-editor';
+import './style.css'
 
 const CargarAvatar = ({ onImageChange }) => {
   const [image, setImage] = useState(null);
@@ -19,26 +20,26 @@ const CargarAvatar = ({ onImageChange }) => {
   };
 
   return (
-    <div>
-      <input type="file" accept="image/*" onChange={handleImageChange} />
+    <div className='AvatarIcon'>
+      <input type="file" accept="image/*" className='avatarInput'  onChange={handleImageChange} />
       {image ? (
         <AvatarEditor
           ref={(editor) => setEditor(editor)}
           image={image}
-          width={200}
-          height={200}
+          width={120}
+          height={120}
           border={50}
           color={[255, 255, 255, 0.5]}
           scale={1}
           rotate={0}
         />
       ) : (
-        <div>Seleccionar imagen</div>
+        <div><p>Seleccionar imagen</p></div>
       )}
       {image && (
-        <div>
-          <button onClick={handleSave}>Guardar</button>
-        </div>
+      
+        <button onClick={handleSave}>Guardar imagen</button>
+      
       )}
     </div>
   );

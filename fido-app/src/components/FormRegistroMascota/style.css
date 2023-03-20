@@ -2,3 +2,25 @@
     color: red;
     font-size: 0.8rem;
     }
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+
+}
+.formulario label{
+    font-size: 0.8rem;
+    font-weight: 550;
+    margin: 2px;
+}
+
+.input{
+    border-radius: 0.2rem;
+    height: 1.3rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border: 2px solid #D2D2D2;
+}
