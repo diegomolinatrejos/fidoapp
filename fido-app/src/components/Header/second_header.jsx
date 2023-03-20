@@ -29,7 +29,7 @@ function Logged_Header() {
                     <MenuOutlinedIcon />
                 </IconButton>
                 <PetsRoundedIcon className='petsIcon'/>
-                <Typography style={{flexGrow:1,fontWeight:'bold', cursor:'pointer'}} onClick={()=>indexPage()}>
+                <Typography style={{flexGrow:1,fontWeight:'bold', cursor:'pointer', color:'#000'}} onClick={()=>indexPage()}>
                     FIDO
                 </Typography>
                 {matchesLogOut &&(

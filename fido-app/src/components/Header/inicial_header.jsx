@@ -22,7 +22,7 @@ function Inicial_Header() {
         <AppBar color='default' className='AppBar'>
             <Toolbar>
                 <PetsRoundedIcon className='petsIcon'/>
-                <Typography style={{flexGrow:1,fontWeight:'bold', cursor:'pointer'}} onClick={()=>indexPage()}>
+                <Typography style={{flexGrow:1,fontWeight:'bold', cursor:'pointer',color:'#000'}} onClick={()=>indexPage()}>
                     FIDO
                 </Typography>
                 <Button variant='contained' style={{textTransform:'none', backgroundColor:'#8C30F5', marginRight:'1rem', borderRadius:'0.5rem'}} onClick={()=>registerPage()}>Registrar</Button>
