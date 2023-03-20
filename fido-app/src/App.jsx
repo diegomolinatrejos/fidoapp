@@ -6,6 +6,7 @@ import Login from './components/Login'
 import Registered_index from './components/Principal_Index/registered_index'
 import CrearRegistroRapido from './components/RegistroRapido/crearRegistroRapido'
 import Mascotas from './components/Mascotas'
+import ServiciosNegocio from './components/Servicios'
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='/app' name='logged-indez' element={<Registered_index/>} />
           <Route path='/registrar' name='registrar' element={<CrearRegistroRapido/>}/>
           <Route path='/pets' name='pets' element={<Mascotas/>}/>
+          <Route path='/servicios-negocio' name='servicios' element={<ServiciosNegocio/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import CargarAvatar from "../Avatar/avatar";
+import './style.css'
 
 const validationSchema = Yup.object().shape({
   foto: Yup.mixed().required("La foto es requerida"),
@@ -26,7 +27,7 @@ const FormRegistroServicio = () => {
     >
       {({ setFieldValue }) => (
         <Form>
-          <div>
+          <div className="Avatar">
             <label htmlFor="foto">Foto:</label>
             <CargarAvatar
               onImageChange={(resizedFile) => {
@@ -35,22 +36,22 @@ const FormRegistroServicio = () => {
             />
             <ErrorMessage name="foto" className="error-message" component="div" />
           </div>
-          <div>
+          <div className="form">
             <label htmlFor="nombre">Nombre del servicio:</label>
-            <Field type="text" name="nombre" />
+            <Field type="text" name="nombre" className='inputServicios'  />
             <ErrorMessage name="nombre" className="error-message" component="div" />
-          </div>
-          <div>
+          
             <label htmlFor="descripcion">Descripción del servicio:</label>
-            <Field type="text" name="descripcion" />
-            <ErrorMessage name="descripcion" className="error-message" component="div" />
-          </div>
-          <div>
+            <Field type="text" name="descripcion" className='inputServicios' />
+            <ErrorMessage name="descripcion" class="error-message" component="div" />
+          
+          
             <label htmlFor="precio">Precio:</label>
-            <Field type="number" name="precio" />
+            <Field type="number" name="precio" className='inputServicios' />
             <ErrorMessage name="precio" className="error-message" component="div" />
+            <button type="submit" className="button">Crear</button>
           </div>
-          <button type="submit">Enviar</button>
+          
         </Form>
       )}
     </Formik>

@@ -31,6 +31,10 @@ function ListaSlideBar() {
   const Pets=()=>{
     navigate('/pets')
   }
+
+  const Servicios=()=>{
+    navigate('/servicios-negocio')
+  }
     const [openProfile, setOpenProfile] = React.useState(false);
     const [openNegocio, setOpenNegocio] = React.useState(false);
     const [openAdmin, setOpenAdmin] = React.useState(false);
@@ -102,7 +106,7 @@ function ListaSlideBar() {
             </ListItemIcon>
             <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Editar negocio" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 3 }}>
+            <ListItemButton sx={{ pl: 3 }} onClick={()=>Servicios()}>
             <ListItemIcon>
                 <AddCircleOutlineRoundedIcon sx={{ fontSize: '20px'}} />
             </ListItemIcon>
