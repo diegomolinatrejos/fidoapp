@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Table, Container, Button } from "reactstrap";
 import "./style.css";
+import ModificarPerfilPersona from "../pantallaPerfilPersona/modificarPerfilPersona";
 
 const data = [
   {
@@ -46,6 +47,9 @@ function PerfilUsuario() {
           Editar Perfil
         </Typography>
       </div>
+      
+        <ModificarPerfilPersona/>
+      
       
 
       <div className="contacto">
