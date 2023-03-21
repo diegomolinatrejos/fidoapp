@@ -8,6 +8,7 @@ import CrearRegistroRapido from './components/RegistroRapido/crearRegistroRapido
 import Mascotas from './components/Mascotas'
 import ServiciosNegocio from './components/Servicios'
 import PerfilUsuario from './components/Perfil/perfilUsuario'
+import ReservasUsuario from './components/Reservaciones/reservasUsuario'
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
           <Route path='/pets' name='pets' element={<Mascotas/>}/>
           <Route path='/servicios-negocio' name='servicios' element={<ServiciosNegocio/>}/>
           <Route path='/perfil-usuario' name='perfil' element={<PerfilUsuario/>}/>
+          <Route path='/reservas-usuario' name='reservas' element={<ReservasUsuario/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

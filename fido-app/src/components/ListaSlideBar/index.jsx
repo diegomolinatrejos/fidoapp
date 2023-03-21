@@ -39,6 +39,9 @@ function ListaSlideBar() {
   const UserProfile=()=>{
     navigate('/perfil-usuario')
   }
+  const UserReservation=()=>{
+    navigate('/reservas-usuario')
+  }
 
     const [openProfile, setOpenProfile] = React.useState(false);
     const [openNegocio, setOpenNegocio] = React.useState(false);
@@ -86,7 +89,7 @@ function ListaSlideBar() {
             </ListItemIcon>
             <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Mis mascotas" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 3 }}>
+            <ListItemButton sx={{ pl: 3 }} onClick={()=>UserReservation()}>
             <ListItemIcon>
                 <ConfirmationNumberRoundedIcon sx={{ fontSize: '20px'}} />
             </ListItemIcon>
