@@ -9,6 +9,7 @@ const validationSchema = Yup.object().shape({
   nombre: Yup.string().required("El nombre del servicio es requerido"),
   descripcion: Yup.string().required("La descripción del servicio es requerida"),
   precio: Yup.number().required("El precio del servicio es requerido"),
+  tiempoEstimado: Yup.number().integer().min(1, "El tiempo estimado debe ser mayor a 0").required("El tiempo estimado es requerido")
 });
 
 const FormRegistroServicio = () => {
@@ -19,6 +20,7 @@ const FormRegistroServicio = () => {
         nombre: "",
         descripcion: "",
         precio: "",
+        tiempoEstimado: ""
       }}
       validationSchema={validationSchema}
       onSubmit={(values) => {
@@ -49,6 +51,11 @@ const FormRegistroServicio = () => {
             <label htmlFor="precio">Precio:</label>
             <Field type="number" name="precio" className='inputServicios' />
             <ErrorMessage name="precio" className="error-message" component="div" />
+
+            <label htmlFor="tiempoEstimado">Tiempo Estimado (minutos):</label>
+            <Field type="number" name="tiempoEstimado" className='inputServicios' />
+            <ErrorMessage name="tiempoEstimado" className="error-message" component="div" />
+
             <button type="submit" className="button">Crear</button>
           </div>
           
