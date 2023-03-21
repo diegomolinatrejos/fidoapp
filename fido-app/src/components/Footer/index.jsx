@@ -16,10 +16,9 @@ function Footer() {
                     FIDO
                 </Typography>
                 <div className='divFooter'>
-                    <img src={Instagram} className='iconosFooter' alt="" />
-                    <img src={Facebook} className='iconosFooter' alt="" />
-                    <img src={WhatsApp} className='iconosFooter' alt="" />
-
+                    <a href="https://www.instagram.com/" target="_blank"><img src={Instagram} className='iconosFooter' alt="Perfil Instagram" /></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src={Facebook} className='iconosFooter' alt="Perfil Facebook" /></a>
+                    <a href="https://web.whatsapp.com/" target="_blank"><img src={WhatsApp} className='iconosFooter' alt="Chat WhatsApp" /></a>
                 </div>
                 <hr className='lineaFooter'/>
                 <Typography align='center' style={{color:'#fff'}}>© {new Date().getFullYear()} FIDO</Typography>
