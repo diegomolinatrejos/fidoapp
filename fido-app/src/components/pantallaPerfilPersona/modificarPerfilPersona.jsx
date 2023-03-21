@@ -54,105 +54,162 @@ const ModificarPerfilPersona = () => {
     >
       {({ values, setFieldValue }) => (
         <Form>
-          <div className="Avatar">
-            <label htmlFor="foto">Foto:</label>
-            <CargarAvatar
-              onImageChange={(resizedFile) => {
-                setFieldValue("foto", resizedFile);
-              }}
-            />
+          <div className="ContenedorGeneral">
+            <div className="ContenedorInterno">
+              <div className="Avatar">
+                <label htmlFor="foto">Foto:</label>
+                <CargarAvatar
+                  onImageChange={(resizedFile) => {
+                    setFieldValue("foto", resizedFile);
+                  }}
+                />
+              </div>
+              <div className="formModicarUsuario">
+                <label htmlFor="email">Correo electrónico:</label>
+                <Field name="email" type="email" className="inputModificar" />
+                <ErrorMessage
+                  name="email"
+                  className="error-message"
+                  component="div"
+                />
 
-            <label htmlFor="email">Correo Electrónico:</label>
-            <Field name="email" type="email" />
-            <ErrorMessage name="email" className="error-message" component="div" />
+                <label htmlFor="password">Contraseña:</label>
+                <Field
+                  name="password"
+                  type="password"
+                  className="inputModificar"
+                />
+                <ErrorMessage
+                  name="password"
+                  className="error-message"
+                  component="div"
+                />
 
-            <label htmlFor="password">Contraseña:</label>
-            <Field name="password" type="password" />
-            <ErrorMessage name="password" className="error-message" component="div" />
+                <label htmlFor="identification">Identificación:</label>
+                <Field name="identification" className="inputModificar" />
+                <ErrorMessage
+                  name="identification"
+                  className="error-message"
+                  component="div"
+                />
 
-            <label htmlFor="identification">Identificación:</label>
-            <Field name="identification" />
-            <ErrorMessage name="identification" className="error-message" component="div" />
+                <label htmlFor="nombre1">Primer Nombre:</label>
+                <Field name="nombre1" className="inputModificar" />
+                <ErrorMessage
+                  name="nombre1"
+                  className="error-message"
+                  component="div"
+                />
 
-            <label htmlFor="nombre1">Primer Nombre:</label>
-            <Field name="nombre1" />
-            <ErrorMessage name="nombre1" className="error-message" component="div" />
+                <label htmlFor="nombre2">Segundo Nombre:</label>
+                <Field name="nombre2" className="inputModificar" />
 
-            <label htmlFor="nombre2">Segundo Nombre:</label>
-            <Field name="nombre2" />
+                <label htmlFor="apellido1">Primer Apellido:</label>
+                <Field name="apellido1" className="inputModificar" />
+                <ErrorMessage
+                  name="apellido1"
+                  className="error-message"
+                  component="div"
+                />
 
-            <label htmlFor="apellido1">Primer Apellido:</label>
-            <Field name="apellido1" />
-            <ErrorMessage name="apellido1" className="error-message" component="div" />
+                <label htmlFor="apellido2">Segundo Apellido:</label>
+                <Field name="apellido2" className="inputModificar" />
 
-            <label htmlFor="apellido2">Segundo Apellido:</label>
-            <Field name="apellido2" />
+                <label htmlFor="whatsapp">WhatsApp:</label>
+                <Field name="whatsapp" className="inputModificar" />
+                <ErrorMessage
+                  name="whatsapp"
+                  className="error-message"
+                  component="div"
+                />
 
-            <label htmlFor="whatsapp">WhatsApp:</label>
-            <Field name="whatsapp" />
-            <ErrorMessage name="whatsapp" className="error-message" component="div" />
+                <label htmlFor="telefonoFijo">Teléfono Fijo:</label>
+                <Field name="telefonoFijo" className="inputModificar" />
+              </div>
+            </div>
+            <div className="ContenedorInterno">
+              <div className="formModicarUsuario">
+                <label htmlFor="nombreOtroContactoMascota">
+                  Nombre otro contacto de mascota:
+                </label>
+                <Field
+                  name="nombreOtroContactoMascota"
+                  className="inputModificar"
+                />
+                <label htmlFor="apellidoOtroContactoMascota">
+                  Apellido otro contacto de mascota:
+                </label>
+                <Field
+                  name="apellidoOtroContactoMascota"
+                  className="inputModificar"
+                />
 
-            <label htmlFor="telefonoFijo">Teléfono Fijo:</label>
-            <Field name="telefonoFijo" />
+                <label htmlFor="telefonoOtroContactoMascota">
+                  Teléfono otro contacto de mascota:
+                </label>
+                <Field
+                  name="telefonoOtroContactoMascota"
+                  className="inputModificar"
+                />
 
-            <label htmlFor="nombreOtroContactoMascota">
-              Nombre otro contacto de mascota:
-            </label>
-            <Field name="nombreOtroContactoMascota" />
+                <label htmlFor="correoOtroContactoMascota">
+                  Correo otro contacto de mascota:
+                </label>
+                <Field
+                  name="correoOtroContactoMascota"
+                  className="inputModificar"
+                />
 
-            <label htmlFor="apellidoOtroContactoMascota">
-              Apellido otro contacto de mascota:
-            </label>
-            <Field name="apellidoOtroContactoMascota" />
+                <label htmlFor="direccion">Dirección:</label>
+                <Field name="direccion" className="inputModificar" />
 
-            <label htmlFor="telefonoOtroContactoMascota">
-              Teléfono otro contacto de mascota:
-            </label>
-            <Field name="telefonoOtroContactoMascota" />
+                <label htmlFor="profesion">Profesión:</label>
+                <Field name="profesion" className="inputModificar" />
 
-            <label htmlFor="correoOtroContactoMascota">
-              Correo otro contacto de mascota:
-            </label>
-            <Field name="correoOtroContactoMascota" />
+                <label htmlFor="anioInicioProfesion">
+                  Año inicio profesión:
+                </label>
+                <Field
+                  name="anioInicioProfesion"
+                  type="number"
+                  className="inputModificar"
+                />
 
-            <label htmlFor="direccion">Dirección:</label>
-            <Field name="direccion" />
+                <label htmlFor="certificado1">Certificado 1:</label>
+                <input
+                  className="Certificados"
+                  name="certificado1"
+                  type="file"
+                  onChange={(event) => {
+                    setFieldValue("certificado1", event.currentTarget.files[0]);
+                  }}
+                />
 
-            <label htmlFor="profesion">Profesión:</label>
-            <Field name="profesion" />
+                <label htmlFor="certificado2">Certificado 2:</label>
+                <input
+                  className="Certificados"
+                  name="certificado2"
+                  type="file"
+                  onChange={(event) => {
+                    setFieldValue("certificado2", event.currentTarget.files[0]);
+                  }}
+                />
 
-            <label htmlFor="anioInicioProfesion">Año inicio profesión:</label>
-            <Field name="anioInicioProfesion" type="number" />
-
-            <label htmlFor="certificado1">Certificado 1:</label>
-            <input
-              name="certificado1"
-              type="file"
-              onChange={(event) => {
-                setFieldValue("certificado1", event.currentTarget.files[0]);
-              }}
-            />
-
-            <label htmlFor="certificado2">Certificado 2:</label>
-            <input
-              name="certificado2"
-              type="file"
-              onChange={(event) => {
-                setFieldValue("certificado2", event.currentTarget.files[0]);
-              }}
-            />
-
-            <label htmlFor="certificado3">Certificado 3:</label>
-            <input
-              name="certificado3"
-              type="file"
-              onChange={(event) => {
-                setFieldValue("certificado3", event.currentTarget.files[0]);
-              }}
-            />
-
+                <label htmlFor="certificado3">Certificado 3:</label>
+                <input
+                  className="Certificados"
+                  name="certificado3"
+                  type="file"
+                  onChange={(event) => {
+                    setFieldValue("certificado3", event.currentTarget.files[0]);
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="botonModificar">
             <button type="submit" className="button">
-              Crear
+              Modificar
             </button>
           </div>
         </Form>
