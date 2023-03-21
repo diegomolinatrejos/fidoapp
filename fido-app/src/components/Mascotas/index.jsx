@@ -10,7 +10,7 @@ function Mascotas() {
     <React.Fragment>
      <Logged_Header/>
      <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-        <Typography component='h1' variant='h1' style={{fontSize:'1.5rem', height:'40px', fontWeight:'700', color:'#8C30F5',fontFamily:[ 'Source Sans Pro','sans-serif'], marginTop:'6rem', marginBottom:'2rem'}}>Mis Servicios</Typography>
+        <Typography component='h1' variant='h1' style={{fontSize:'1.5rem', height:'40px', fontWeight:'700', color:'#8C30F5',fontFamily:[ 'Source Sans Pro','sans-serif'], marginTop:'6rem', marginBottom:'2rem'}}>Mis Mascotas</Typography>
      </div>
 
      <MascotaList/>

@@ -35,6 +35,11 @@ function ListaSlideBar() {
   const Servicios=()=>{
     navigate('/servicios-negocio')
   }
+
+  const UserProfile=()=>{
+    navigate('/perfil-usuario')
+  }
+
     const [openProfile, setOpenProfile] = React.useState(false);
     const [openNegocio, setOpenNegocio] = React.useState(false);
     const [openAdmin, setOpenAdmin] = React.useState(false);
@@ -68,7 +73,7 @@ function ListaSlideBar() {
         </ListItemButton>
         <Collapse in={openProfile} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 3 }}>
+            <ListItemButton sx={{ pl: 3 }} onClick={()=>UserProfile()}>
             <ListItemIcon>
                 <EditRoundedIcon sx={{ fontSize: '20px'}} />
             </ListItemIcon>
