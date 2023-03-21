@@ -7,6 +7,7 @@ import Registered_index from './components/Principal_Index/registered_index'
 import CrearRegistroRapido from './components/RegistroRapido/crearRegistroRapido'
 import Mascotas from './components/Mascotas'
 import ServiciosNegocio from './components/Servicios'
+import PerfilUsuario from './components/Perfil/perfilUsuario'
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/registrar' name='registrar' element={<CrearRegistroRapido/>}/>
           <Route path='/pets' name='pets' element={<Mascotas/>}/>
           <Route path='/servicios-negocio' name='servicios' element={<ServiciosNegocio/>}/>
+          <Route path='/perfil-usuario' name='perfil' element={<PerfilUsuario/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>
