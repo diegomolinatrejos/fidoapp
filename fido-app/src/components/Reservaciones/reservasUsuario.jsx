@@ -19,12 +19,7 @@ const data = [
     fecha: "05/04/2023",
     hora: "14:30",
   },
-  {
-    lugar: "Entrenamiento",
-    mascota: "Kira",
-    fecha: "07/04/2023",
-    hora: "13:30",
-  },
+  
 ];
 
 function ReservasUsuario() {
@@ -59,7 +54,7 @@ function ReservasUsuario() {
       </div>
       <div className="Reservation">
         <Container
-          style={{ marginBottom: "5rem", marginTop: "2rem" }}
+          style={{ marginBottom: "2rem", marginTop: "2rem" }}
           className="ContainerTable"
         >
           <Table style={{ marginBottom: "5rem" }} className="tblData">
@@ -111,8 +106,10 @@ function ReservasUsuario() {
           </Table>
         </Container>
       </div>
-
-      <Footer />
+      <div className="FixedFooter">
+        <Footer />
+      </div>            
+      
     </React.Fragment>
   );
 }
