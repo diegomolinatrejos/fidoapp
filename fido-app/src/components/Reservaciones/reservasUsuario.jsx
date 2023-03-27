@@ -1,31 +1,65 @@
-import React from "react";
+import React, {useState} from "react";
 import { Typography } from "@mui/material";
 import Logged_Header from "../Header/second_header";
 import Footer from "../Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Table, Container, Button } from "reactstrap";
 import "./style.css";
+import Swal from 'sweetalert2';
 
-const data = [
-  {
-    lugar: "Paw Grooming",
-    mascota: "Tyson",
-    fecha: "29/03/2023",
-    hora: "09:30",
-  },
-  {
-    lugar: "Veterinaria Home",
-    mascota: "Rocky",
-    fecha: "05/04/2023",
-    hora: "14:30",
-  },
-  
-];
 
 function ReservasUsuario() {
-  const state = {
-    data: data,
+  const [data, setData] = useState([
+    {
+      id: 1,  // Agrega un id único para cada objeto de datos
+      lugar: "Paw Grooming",
+      mascota: "Tyson",
+      fecha: "29/03/2023",
+      hora: "09:30"
+    },
+    {
+      id: 2,  // Agrega un id único para cada objeto de datos
+      lugar: "Veterinaria Home",
+      mascota: "Rocky",
+      fecha: "05/04/2023",
+      hora: "14:30"
+    }
+  ]);
+
+  const eliminar= (dato) => {
+    Swal.fire({
+      title: "¿Estás seguro de eliminar la reservación en "+dato.lugar+"?",
+      text: "¡No podrás revertir esto!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, eliminarlo!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const newData = [...data];
+        const index = newData.findIndex((item) => item.lugar === dato.lugar);
+        newData.splice(index, 1);
+        setData(newData);
+        Swal.fire(
+          'Eliminado!',
+          'El servicio ha sido eliminado.',
+          'success'
+        )
+      }
+    })
   };
+  const [query,setQuery]=useState("");
+
+  const keys=["lugar", "mascota", "fecha"];
+
+
+  const search=(info)=>{
+    return info.filter(item=>
+      keys.some(key=>item[key].toLowerCase().includes(query)));
+  }
+
+  
   return (
     <React.Fragment>
       <Logged_Header />
@@ -46,15 +80,19 @@ function ReservasUsuario() {
             color: "#8C30F5",
             fontFamily: ["Source Sans Pro", "sans-serif"],
             marginTop: "6rem",
-            marginBottom: "4rem",
+            marginBottom: "1rem",
           }}
         >
           Mis Reservaciones
         </Typography>
       </div>
       <div className="Reservation">
+        <div className="filtroBusqueda">
+          <input type="text" name="" id="" placeholder="Buscar" onChange={e=>setQuery(e.target.value)}/>
+        </div>
+        
         <Container
-          style={{ marginBottom: "2rem", marginTop: "2rem" }}
+          style={{ marginBottom: "5rem", marginTop: "2rem" }}
           className="ContainerTable"
         >
           <Table style={{ marginBottom: "5rem" }} className="tblData">
@@ -68,12 +106,12 @@ function ReservasUsuario() {
               </tr>
             </thead>
             <tbody>
-              {state.data.map((element) => (
-                <tr>
-                  <td style={{ paddingTop: "15px" }}>{element.lugar}</td>
-                  <td style={{ paddingTop: "15px" }}>{element.mascota}</td>
-                  <td style={{ paddingTop: "15px" }}>{element.fecha}</td>
-                  <td style={{ paddingTop: "15px" }}>{element.hora}</td>
+              {search(data).map((dato, index) => (
+                <tr key={index}>
+                  <td style={{ paddingTop: "15px" }}>{dato.lugar}</td>
+                  <td style={{ paddingTop: "15px" }}>{dato.mascota}</td>
+                  <td style={{ paddingTop: "15px" }}>{dato.fecha}</td>
+                  <td style={{ paddingTop: "15px" }}>{dato.hora}</td>
                   <td>
                     <Button style={{backgroundColor:'#8C30F5'}}>
                       <svg
@@ -87,7 +125,7 @@ function ReservasUsuario() {
                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
                       </svg>
                     </Button>{" "}
-                    <Button color="danger">
+                    <Button color="danger" onClick={()=>eliminar(dato)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
