@@ -47,6 +47,16 @@ function ListaSlideBar() {
     navigate('/reservas-negocio')
   }
 
+  const BusinessListApp=()=>{
+    navigate('/negocios-asociados')
+  }
+
+  const ClientsListApp=()=>{
+    navigate('/clientes-asociados')
+  }
+
+  
+
     const [openProfile, setOpenProfile] = React.useState(false);
     const [openNegocio, setOpenNegocio] = React.useState(false);
     const [openAdmin, setOpenAdmin] = React.useState(false);
@@ -150,13 +160,13 @@ function ListaSlideBar() {
         </ListItemButton>
         <Collapse in={openAdmin} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 3 }}>
+          <ListItemButton sx={{ pl: 3 }} onClick={()=>ClientsListApp()}>
             <ListItemIcon>
-                <GroupsRoundedIcon sx={{ fontSize: '20px'}} />
+                <GroupsRoundedIcon sx={{ fontSize: '20px'}}  />
             </ListItemIcon>
             <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Clientes" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 3 }}>
+            <ListItemButton sx={{ pl: 3 }} onClick={()=>BusinessListApp()}>
             <ListItemIcon>
                 <DomainRoundedIcon sx={{ fontSize: '20px'}} />
             </ListItemIcon>

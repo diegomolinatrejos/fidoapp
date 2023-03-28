@@ -37,12 +37,12 @@ function ReservasNegocio() {
         }).then((result) => {
           if (result.isConfirmed) {
             const newData = [...data];
-            const index = newData.findIndex((item) => item.lugar === dato.lugar);
+            const index = newData.findIndex((item) => item.duenno === dato.duenno);
             newData.splice(index, 1);
             setData(newData);
             Swal.fire(
               'Eliminado!',
-              'El servicio ha sido eliminado.',
+              'La reserva ha sido eliminada.',
               'success'
             )
           }

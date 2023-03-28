@@ -10,6 +10,8 @@ import ServiciosNegocio from './components/Servicios'
 import PerfilUsuario from './components/Perfil/perfilUsuario'
 import ReservasUsuario from './components/Reservaciones/reservasUsuario'
 import ReservasNegocio from './components/Reservaciones/reservasNegocio'
+import ClientsList from './components/Administration/clientsList'
+import BusinessList from './components/Administration/businessList'
 
 
 const App = () => {
@@ -26,6 +28,8 @@ const App = () => {
           <Route path='/perfil-usuario' name='perfil' element={<PerfilUsuario/>}/>
           <Route path='/reservas-usuario' name='reservas' element={<ReservasUsuario/>}/>
           <Route path='/reservas-negocio' name='reservas' element={<ReservasNegocio/>}/>
+          <Route path='/clientes-asociados' name='reservas' element={<ClientsList/>}/>
+          <Route path='/negocios-asociados' name='reservas' element={<BusinessList/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

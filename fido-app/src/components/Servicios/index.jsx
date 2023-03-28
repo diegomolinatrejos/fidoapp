@@ -41,7 +41,7 @@ function ServiciosNegocio() {
     }).then((result) => {
       if (result.isConfirmed) {
         const newData = [...data];
-        const index = newData.findIndex((item) => item.lugar === dato.lugar);
+        const index = newData.findIndex((item) => item.nombre === dato.nombre);
         newData.splice(index, 1);
         setData(newData);
         Swal.fire(
