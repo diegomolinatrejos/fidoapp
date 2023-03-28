@@ -43,6 +43,10 @@ function ListaSlideBar() {
     navigate('/reservas-usuario')
   }
 
+  const BusinessReservation=()=>{
+    navigate('/reservas-negocio')
+  }
+
     const [openProfile, setOpenProfile] = React.useState(false);
     const [openNegocio, setOpenNegocio] = React.useState(false);
     const [openAdmin, setOpenAdmin] = React.useState(false);
@@ -120,7 +124,7 @@ function ListaSlideBar() {
             </ListItemIcon>
             <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Gestión de servicios" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 3 }}>
+            <ListItemButton sx={{ pl: 3 }} onClick={()=>BusinessReservation()}>
             <ListItemIcon>
                 <BookOnlineRoundedIcon sx={{ fontSize: '20px'}} />
             </ListItemIcon>
