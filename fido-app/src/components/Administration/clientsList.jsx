@@ -1,66 +1,63 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Typography } from "@mui/material";
 import Logged_Header from "../Header/second_header";
 import Footer from "../Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Table, Container, Button } from "reactstrap";
-import "./style.css";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
-
-function ReservasUsuario() {
+function ClientsList() {
   const [data, setData] = useState([
     {
-      id: 1,  // Agrega un id único para cada objeto de datos
-      lugar: "Paw Grooming",
-      mascota: "Tyson",
-      fecha: "29/03/2023",
-      hora: "09:30"
+      id: 1, // Agrega un id único para cada objeto de datos
+      nombre: "Diego Molina",
+      fechaRegistro: "28/03/2023",
+      status: "Activo",
     },
     {
-      id: 2,  // Agrega un id único para cada objeto de datos
-      lugar: "Veterinaria Home",
-      mascota: "Rocky",
-      fecha: "05/04/2023",
-      hora: "14:30"
-    }
+      id: 2, // Agrega un id único para cada objeto de datos
+      nombre: "Keylor Gómez",
+      fechaRegistro: "15/03/2023",
+      status: "Activo",
+    },
+    {
+      id: 3, // Agrega un id único para cada objeto de datos
+      nombre: "Carlos Castro",
+      fechaRegistro: "16/03/2023",
+      status: "Inactivo",
+    },
   ]);
 
-  const eliminar= (dato) => {
+  const eliminar = (dato) => {
     Swal.fire({
-      title: "¿Estás seguro de eliminar la reservación en "+dato.lugar+"?",
+      title: "¿Estás seguro de eliminar a " + dato.nombre + "?",
       text: "¡No podrás revertir esto!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Eliminar!',
-      cancelButtonText:'Cancelar'
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Eliminar!",
+      cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
         const newData = [...data];
-        const index = newData.findIndex((item) => item.lugar === dato.lugar);
+        const index = newData.findIndex((item) => item.nombre === dato.nombre);
         newData.splice(index, 1);
         setData(newData);
-        Swal.fire(
-          'Eliminado!',
-          'La reserva ha sido eliminada.',
-          'success'
-        )
+        Swal.fire("Eliminado!", "El cliente ha sido eliminado.", "success");
       }
-    })
+    });
   };
-  const [query,setQuery]=useState("");
 
-  const keys=["lugar", "mascota", "fecha"];
+  const [query, setQuery] = useState("");
 
+  const keys = ["nombre", "status", "fechaRegistro"];
 
-  const search=(info)=>{
-    return info.filter(item=>
-      keys.some(key=>item[key].toLowerCase().includes(query)));
-  }
-
-  
+  const search = (info) => {
+    return info.filter((item) =>
+      keys.some((key) => item[key].toLowerCase().includes(query))
+    );
+  };
   return (
     <React.Fragment>
       <Logged_Header />
@@ -84,14 +81,19 @@ function ReservasUsuario() {
             marginBottom: "1rem",
           }}
         >
-          Mis Reservaciones
+          Clientes FIDO
         </Typography>
       </div>
       <div className="Reservation">
         <div className="filtroBusqueda">
-          <input type="text" name="" id="" placeholder="Buscar" onChange={e=>setQuery(e.target.value)}/>
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Buscar"
+            onChange={(e) => setQuery(e.target.value)}
+          />
         </div>
-        
         <Container
           style={{ marginBottom: "5rem", marginTop: "2rem" }}
           className="ContainerTable"
@@ -99,34 +101,32 @@ function ReservasUsuario() {
           <Table style={{ marginBottom: "5rem" }} className="tblData">
             <thead>
               <tr>
-                <th>Lugar</th>
-                <th>Mascota</th>
-                <th>Fecha</th>
-                <th>Hora</th>
+                <th>Nombre</th>
+                <th>Fecha Registro</th>
+                <th>Estado</th>
                 <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
               {search(data).map((dato, index) => (
                 <tr key={index}>
-                  <td style={{ paddingTop: "15px" }}>{dato.lugar}</td>
-                  <td style={{ paddingTop: "15px" }}>{dato.mascota}</td>
-                  <td style={{ paddingTop: "15px" }}>{dato.fecha}</td>
-                  <td style={{ paddingTop: "15px" }}>{dato.hora}</td>
-                  <td>
-                    <Button style={{backgroundColor:'#8C30F5'}}>
+                  <td style={{ paddingTop: "15px" }}>{dato.nombre}</td>
+                  <td style={{ paddingTop: "15px" }}>{dato.fechaRegistro}</td>
+                  <td style={{ paddingTop: "15px" }}>{dato.status}</td>
+                  <td style={{ paddingTop: "15px" }}>
+                    <Button style={{ backgroundColor: "#8C30F5" }}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
                         height="16"
                         fill="currentColor"
-                        class="bi bi-info-circle-fill"
+                        class="bi bi-pencil-fill"
                         viewBox="0 0 16 16"
                       >
-                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
                       </svg>
                     </Button>{" "}
-                    <Button color="danger" onClick={()=>eliminar(dato)}>
+                    <Button color="danger" onClick={() => eliminar(dato)}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -145,12 +145,12 @@ function ReservasUsuario() {
           </Table>
         </Container>
       </div>
+
       <div className="FixedFooter">
         <Footer />
-      </div>            
-      
+      </div>
     </React.Fragment>
   );
 }
 
-export default ReservasUsuario;
+export default ClientsList;

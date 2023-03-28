@@ -34,12 +34,12 @@ function PerfilUsuario() {
       }).then((result) => {
         if (result.isConfirmed) {
           const newData = [...data];
-          const index = newData.findIndex((item) => item.lugar === dato.lugar);
+          const index = newData.findIndex((item) => item.id === dato.id);
           newData.splice(index, 1);
           setData(newData);
           Swal.fire(
             'Eliminado!',
-            'El servicio ha sido eliminado.',
+            'El contacto ha sido eliminado.',
             'success'
           )
         }
