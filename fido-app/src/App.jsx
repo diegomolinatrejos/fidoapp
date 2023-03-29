@@ -12,6 +12,7 @@ import ReservasUsuario from './components/Reservaciones/reservasUsuario'
 import ReservasNegocio from './components/Reservaciones/reservasNegocio'
 import ClientsList from './components/Administration/clientsList'
 import BusinessList from './components/Administration/businessList'
+import RegistroPromocionNoticias from './components/RegistroPromocionNoticias/registroPromocionNoticias'
 
 
 const App = () => {
@@ -26,10 +27,11 @@ const App = () => {
           <Route path='/pets' name='pets' element={<Mascotas/>}/>
           <Route path='/servicios-negocio' name='servicios' element={<ServiciosNegocio/>}/>
           <Route path='/perfil-usuario' name='perfil' element={<PerfilUsuario/>}/>
-          <Route path='/reservas-usuario' name='reservas' element={<ReservasUsuario/>}/>
-          <Route path='/reservas-negocio' name='reservas' element={<ReservasNegocio/>}/>
-          <Route path='/clientes-asociados' name='reservas' element={<ClientsList/>}/>
-          <Route path='/negocios-asociados' name='reservas' element={<BusinessList/>}/>
+          <Route path='/reservas-usuario' name='reservas-usuarios' element={<ReservasUsuario/>}/>
+          <Route path='/reservas-negocio' name='reservas-negocios' element={<ReservasNegocio/>}/>
+          <Route path='/clientes-asociados' name='reservas-asociado-cliente' element={<ClientsList/>}/>
+          <Route path='/negocios-asociados' name='reservas-asociado-negocio' element={<BusinessList/>}/>
+          <Route path='/promocion-noticias' name='promocion-noticias' element={<RegistroPromocionNoticias/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>
