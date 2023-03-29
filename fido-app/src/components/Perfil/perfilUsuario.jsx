@@ -88,8 +88,8 @@ function PerfilUsuario() {
             fontWeight: "700",
             color: "#8C30F5",
             fontFamily: ["Source Sans Pro", "sans-serif"],
-            marginTop: "2rem",
-            marginBottom: "1rem",
+            marginTop: "3rem",
+
           }}
         >
           Contacto
