@@ -56,7 +56,7 @@ const RegistroPromocionNoticias = () => {
             <label htmlFor="noticiaOPromocion">
               Descripción de Noticia o promoción:
             </label>
-            <Field name="noticiaOPromocion" as="select">
+            <Field name="noticiaOPromocion" as="select" className="inputServicios">
               <option value="">Seleccione una opción</option>
               <option value="promocion">Promoción o servicio</option>
               <option value="noticia">Noticia</option>

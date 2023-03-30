@@ -12,7 +12,7 @@ import ReservasUsuario from './components/Reservaciones/reservasUsuario'
 import ReservasNegocio from './components/Reservaciones/reservasNegocio'
 import ClientsList from './components/Administration/clientsList'
 import BusinessList from './components/Administration/businessList'
-import RegistroPromocionNoticias from './components/RegistroPromocionNoticias/registroPromocionNoticias'
+import GestionPromociones from './components/GestionPromociones/GestionPromociones'
 
 
 const App = () => {
@@ -31,7 +31,7 @@ const App = () => {
           <Route path='/reservas-negocio' name='reservas-negocios' element={<ReservasNegocio/>}/>
           <Route path='/clientes-asociados' name='reservas-asociado-cliente' element={<ClientsList/>}/>
           <Route path='/negocios-asociados' name='reservas-asociado-negocio' element={<BusinessList/>}/>
-          <Route path='/promocion-noticias' name='promocion-noticias' element={<RegistroPromocionNoticias/>}/>
+          <Route path='/promocion-noticias' name='promocion-noticias' element={<GestionPromociones/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

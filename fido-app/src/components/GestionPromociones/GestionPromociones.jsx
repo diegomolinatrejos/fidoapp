@@ -1,37 +1,34 @@
 import React, { useState } from "react";
-import { Avatar, Typography, CssBaseline } from "@mui/material";
 import Logged_Header from "../Header/second_header";
 import Footer from "../Footer";
-import FormRegistroServicio from "../FormRegistroServicio/formRegistroServicio";
-import "./style.css";
+import { Avatar, Typography, CssBaseline } from "@mui/material";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Table, Button, Container } from "reactstrap";
 import Swal from "sweetalert2";
+import RegistroPromocionNoticias from "../RegistroPromocionNoticias/registroPromocionNoticias";
 
-function ServiciosNegocio() {
+function GestionPromociones() {
   const [data, setData] = useState([
     {
       id: 1,
-      imgServicio:
-        "https://i.pinimg.com/564x/8a/df/12/8adf12b050d665990de59c11960d4bc5.jpg",
-      nombre: "Baño",
+      img: "https://i.pinimg.com/564x/8a/df/12/8adf12b050d665990de59c11960d4bc5.jpg",
       descripcion: "Solo baño, pelo corto, menos de 10kg",
-      tiempo: "30",
       precio: "10000",
     },
     {
       id: 2,
-      imgServicio: "",
-      nombre: "Baño y corte",
+      img: "",
       descripcion: "Baño y corte, pelo largo, más de 15kg",
-      tiempo: "90",
       precio: "15000",
     },
   ]);
 
   const eliminar = (dato) => {
     Swal.fire({
-      title: "¿Estás seguro de eliminar " + dato.nombre + " de tus servicios?",
+      title:
+        "¿Estás seguro de eliminar " +
+        dato.descripcion +
+        " de tus ofertas y servicios?",
       text: "¡No podrás revertir esto!",
       icon: "warning",
       showCancelButton: true,
@@ -42,16 +39,20 @@ function ServiciosNegocio() {
     }).then((result) => {
       if (result.isConfirmed) {
         const newData = [...data];
-        const index = newData.findIndex((item) => item.nombre === dato.nombre);
+        const index = newData.findIndex((item) => item.id === dato.id);
         newData.splice(index, 1);
         setData(newData);
-        Swal.fire("Eliminado!", "El servicio ha sido eliminado.", "success");
+        Swal.fire(
+          "Eliminado!",
+          "La oferta o noticia ha sido eliminada.",
+          "success"
+        );
       }
     });
   };
 
   const [query, setQuery] = useState("");
-  const keys = ["nombre", "precio"];
+  const keys = ["descripcion", "precio"];
   const search = (info) => {
     return info.filter((item) =>
       keys.some((key) => item[key].toLowerCase().includes(query))
@@ -76,14 +77,14 @@ function ServiciosNegocio() {
             marginBottom: "2rem",
           }}
         >
-          Mis Servicios
+          Ofertas y Noticias
         </Typography>
         <div className="filtroBusqueda">
           <input
             type="text"
             name=""
             id=""
-            placeholder="Buscar"
+            placeholder="Buscar oferta o noticia"
             onChange={(e) => setQuery(e.target.value)}
           />
         </div>
@@ -100,8 +101,7 @@ function ServiciosNegocio() {
                 }}
               >
                 <tr>
-                  <th>Imagen</th>
-                  <th>Nombre</th>
+                  <th>Imágen</th>
                   <th>Descripción</th>
                   <th>Precio</th>
                   <th>Acciones</th>
@@ -111,12 +111,8 @@ function ServiciosNegocio() {
                 {search(data).map((dato, index) => (
                   <tr key={index}>
                     <td style={{ padding: "8px 8px 8px 25px" }}>
-                      <Avatar
-                        src={dato.imgServicio}
-                        sx={{ width: 37, height: 37 }}
-                      />
+                      <Avatar src={dato.img} sx={{ width: 37, height: 37 }} />
                     </td>
-                    <td style={{ paddingTop: "15px" }}>{dato.nombre}</td>
                     <td style={{ paddingTop: "15px" }}>{dato.descripcion}</td>
                     <td style={{ paddingTop: "15px" }}>₡{dato.precio}</td>
                     <td>
@@ -163,14 +159,14 @@ function ServiciosNegocio() {
             marginBottom: "2rem",
           }}
         >
-          Formulario Servicios
+          Formulario ofertas y noticias
         </Typography>
-        <FormRegistroServicio />
-      </div>
 
+        <RegistroPromocionNoticias />
+      </div>
       <Footer />
     </React.Fragment>
   );
 }
 
-export default ServiciosNegocio;
+export default GestionPromociones;
