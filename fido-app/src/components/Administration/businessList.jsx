@@ -153,7 +153,7 @@ function BusinessList() {
         </div>
 
         <Container
-          style={{ marginBottom: "4rem", marginTop: "2rem" }}
+          style={{ marginBottom: "2rem", marginTop: "2rem" }}
           className="ContainerTable"
         >
           <div className="contenedorTbl">

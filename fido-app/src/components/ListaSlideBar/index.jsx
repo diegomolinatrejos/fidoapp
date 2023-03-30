@@ -56,6 +56,10 @@ function ListaSlideBar() {
   }
 
   
+  const GestioPromos=()=>{
+    navigate('/promocion-noticias')
+  }
+  
 
     const [openProfile, setOpenProfile] = React.useState(false);
     const [openNegocio, setOpenNegocio] = React.useState(false);
@@ -140,11 +144,11 @@ function ListaSlideBar() {
             </ListItemIcon>
             <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Gestión de reservas" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 3 }}>
+            <ListItemButton sx={{ pl: 3 }} onClick={()=>GestioPromos()}>
             <ListItemIcon>
                 <ReceiptRoundedIcon sx={{ fontSize: '20px'}} />
             </ListItemIcon>
-            <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Gestión de promociones" />
+            <ListItemText primaryTypographyProps={{ style: { fontSize: '0.7rem' } }}  primary="Promociones/Noticias" />
             </ListItemButton>
            
         </List>

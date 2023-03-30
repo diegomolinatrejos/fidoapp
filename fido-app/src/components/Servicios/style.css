@@ -1,6 +1,6 @@
 .servicios{
     margin-top: .5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,8 +70,9 @@
     border-radius: 0.2rem;
     border:  2px solid #D2D2D2;
     height: 2.3rem;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin-bottom: 0.5rem;
+    color: #737373;
 }
 .inputServicios:focus{
     outline-color: #bf92f4;
