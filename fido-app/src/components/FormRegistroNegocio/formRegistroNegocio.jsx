@@ -62,69 +62,70 @@ const FormRegistroNegocio = () => {
             />
           </div>
 
-          <label htmlFor="nombreNegocio">Nombre del negocio:</label>
-          <Field name="nombreNegocio" type="text" className="input" />
-          <ErrorMessage
-            name="nombreNegocio"
-            className="error-message"
-            component="div"
-          />
+          <div className="form">
+            <label htmlFor="nombreNegocio">Nombre del negocio:</label>
+            <Field name="nombreNegocio" type="text" className="inputServicios" />
+            <ErrorMessage
+              name="nombreNegocio"
+              className="error-message"
+              component="div"
+            />
 
-          <label htmlFor="razonSocial">Razón social:</label>
-          <Field name="razonSocial" type="text" className="input" />
-          <ErrorMessage
-            name="razonSocial"
-            className="error-message"
-            component="div"
-          />
+            <label htmlFor="razonSocial">Razón social:</label>
+            <Field name="razonSocial" type="text" className="inputServicios" />
+            <ErrorMessage
+              name="razonSocial"
+              className="error-message"
+              component="div"
+            />
 
-          <label htmlFor="cedJuridica">Cédula jurídica:</label>
-          <Field name="cedJuridica" type="text" className="input" />
-          <ErrorMessage
-            name="cedJuridica"
-            className="error-message"
-            component="div"
-          />
+            <label htmlFor="cedJuridica">Cédula jurídica:</label>
+            <Field name="cedJuridica" type="text" className="inputServicios" />
+            <ErrorMessage
+              name="cedJuridica"
+              className="error-message"
+              component="div"
+            />
 
-          <label htmlFor="whatsappNegocio">Número de WhatsApp:</label>
-          <Field name="whatsappNegocio" type="text" className="input" />
-          <ErrorMessage
-            name="whatsappNegocio"
-            className="error-message"
-            component="div"
-          />
+            <label htmlFor="whatsappNegocio">Número de WhatsApp:</label>
+            <Field name="whatsappNegocio" type="text" className="inputServicios" />
+            <ErrorMessage
+              name="whatsappNegocio"
+              className="error-message"
+              component="div"
+            />
 
-          <label htmlFor="telefonoFijo">Teléfono fijo:</label>
-          <Field name="telefonoFijo" type="text" className="input" />
-          <ErrorMessage
-            name="telefonoFijo"
-            className="error-message"
-            component="div"
-          />
+            <label htmlFor="telefonoFijo">Teléfono fijo:</label>
+            <Field name="telefonoFijo" type="text" className="inputServicios" />
+            <ErrorMessage
+              name="telefonoFijo"
+              className="error-message"
+              component="div"
+            />
 
-          <label htmlFor="direccion">Dirección</label>
-          <Field name="direccion" type="text" className="input" />
-          <ErrorMessage
-            name="direccion"
-            className="error-message"
-            component="div"
-          />
+            <label htmlFor="direccion">Dirección</label>
+            <Field name="direccion" type="text" className="inputServicios" />
+            <ErrorMessage
+              name="direccion"
+              className="error-message"
+              component="div"
+            />
 
-          <label htmlFor="descripcionInstalaciones">
-            Descripción de Instalaciones
-          </label>
-          <Field
-            name="descripcionInstalaciones"
-            type="text"
-            className="input"
-          />
-          <ErrorMessage
-            name="descripcionInstalaciones"
-            className="error-message"
-            component="div"
-          />
+            <label htmlFor="descripcionInstalaciones">
+              Descripción de Instalaciones
+            </label>
+            <Field
+              name="descripcionInstalaciones"
+              type="text"
+              className="inputServicios"
+            />
+            <ErrorMessage
+              name="descripcionInstalaciones"
+              className="error-message"
+              component="div"
+            />
 
-          {/* <label htmlFor="fotoInstalaciones1">Foto 1 de Instalaciones</label>
+            {/* <label htmlFor="fotoInstalaciones1">Foto 1 de Instalaciones</label>
           <input
             className="fotoInstalaciones"
             name="fotoInstalaciones1"
@@ -135,41 +136,45 @@ const FormRegistroNegocio = () => {
             }}
           /> */}
 
-          <label htmlFor="certificado1">Certificado Patente Permiso</label>
-          <input
-            className="certificado"
-            name="certificado1"
-            type="file"
-            onChange={(event) => {
-              setFieldValue("certificado1", event.currentTarget.files[0]);
-            }}
-          />
+            <label htmlFor="certificado1">Certificado Patente Permiso</label>
+            <input
+              className="certificado"
+              name="certificado1"
+              type="file"
+              onChange={(event) => {
+                setFieldValue("certificado1", event.currentTarget.files[0]);
+              }}
+            />
 
-          <label htmlFor="certificado2">Certificado Patente Permiso</label>
-          <input
-            className="certificado"
-            name="certificado2"
-            type="file"
-            onChange={(event) => {
-              setFieldValue("certificado2", event.currentTarget.files[0]);
-            }}
-          />
+            <label htmlFor="certificado2">Certificado Patente Permiso</label>
+            <input
+              className="certificado"
+              name="certificado2"
+              type="file"
+              onChange={(event) => {
+                setFieldValue("certificado2", event.currentTarget.files[0]);
+              }}
+            />
 
-          <label htmlFor="encargado">Dirección</label>
-          <Field name="encargado" type="text" className="input" />
-          <ErrorMessage
-            name="encargado"
-            className="error-message"
-            component="div"
-          />
+            <label htmlFor="encargado">Dirección</label>
+            <Field name="encargado" type="text" className="inputServicios" />
+            <ErrorMessage
+              name="encargado"
+              className="error-message"
+              component="div"
+            />
 
-          <label htmlFor="estatus">Estatus</label>
-          <Field name="estatus" type="text" className="input" />
-          <ErrorMessage
-            name="estatus"
-            className="error-message"
-            component="div"
-          />
+            <label htmlFor="estatus">Estatus</label>
+            <Field name="estatus" type="text" className="inputServicios" />
+            <ErrorMessage
+              name="estatus"
+              className="error-message"
+              component="div"
+            />
+          </div>
+        <button type="submit" className="btnRegistrar">
+          REGISTRAR
+        </button>
         </Form>
       )}
     </Formik>
