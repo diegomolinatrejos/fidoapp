@@ -8,7 +8,7 @@ function CardsApp() {
   return (
     <React.Fragment>
         <div style={{backgroundColor:'#75E3EA'}} className='PrincipalContainer'>
-            <h2 style={{fontSize:'1.3rem', margin:'1rem', fontWeight:'bold'}}>Ofertas y promociones</h2>
+            <h2 style={{fontSize:'1.3rem', margin:'1rem', fontWeight:'bold'}}>Ofertas y Noticias</h2>
             <CardList list={listPromos}/>
         </div>
         <div  className='PrincipalContainer' style={{backgroundColor:'#fff'}}>
