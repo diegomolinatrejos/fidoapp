@@ -40,6 +40,11 @@ function ListaSlideBar() {
   const UserProfile = () => {
     navigate("/perfil-usuario");
   };
+
+  const BusinessProfile = () => {
+    navigate("/perfil-negocio");
+  };
+
   const UserReservation = () => {
     navigate("/reservas-usuario");
   };
@@ -147,7 +152,7 @@ function ListaSlideBar() {
       </ListItemButton>
       <Collapse in={openNegocio} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 3 }}>
+          <ListItemButton sx={{ pl: 3 }} onClick={()=>BusinessProfile()}>
             <ListItemIcon>
               <AppRegistrationRoundedIcon sx={{ fontSize: "20px" }} />
             </ListItemIcon>
