@@ -8,11 +8,16 @@ import {Pagination, Navigation} from "swiper"
 import {Card, CardActions, CardContent, Button, Typography} from '@mui/material'
 import Modal from '../Modal/modal'
 import styled from 'styled-components';
+import {useNavigate} from 'react-router-dom'
 
 
 
 function Cards({card}) {
   const [estadoModal, setEstadoModal]=useState(false);
+  const navigate=useNavigate()
+    const ReservPage=()=>{
+        navigate('/reservar-servicio')
+    }
 
   return (
     <React.Fragment>
@@ -77,7 +82,7 @@ function Cards({card}) {
             <h1>{card.title}</h1>
             <p>{card.descripcion}</p>
             <p>Precio: ₡{card.price}</p>
-            <Boton>Reservar</Boton>
+            <Boton onClick={()=>ReservPage()}>Reservar</Boton>
           </Informacion>
         </Contenido>
         
