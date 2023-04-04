@@ -2,7 +2,7 @@
   "name": "fido-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://https://diegomolinatrejos.github.io/fidoapp/",
+  "homepage": "https://https://diegomolinatrejos.github.io/fidoapp/",
   "type": "module",
   "scripts": {
     "dev": "vite",
