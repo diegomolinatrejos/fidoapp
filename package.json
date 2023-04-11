@@ -2,13 +2,11 @@
   "name": "fido-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://https://diegomolinatrejos.github.io/fidoapp/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -35,7 +33,6 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
-    "gh-pages": "^5.0.0",
     "vite": "^4.1.0"
   }
 }
