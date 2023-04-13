@@ -29,7 +29,7 @@ const CrearRegistroRapido = () => {
                 </Typography>
             </Toolbar>
         </AppBar>
-        <Container component={Paper} elevation={0} maxWidth='xs' style={{borderRadius:'1.5rem', height:'700px', width:'350px', marginTop:'6.5rem', marginBottom:'5rem',boxShadow: '0px 3px 1px -2px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 1px 5px 0px rgba(0, 0, 0, 0.12)'}} >
+        <Container component={Paper} elevation={0} maxWidth='xs' style={{borderRadius:'1.5rem', minHeight:'600px', width:'350px', marginTop:'6.5rem', marginBottom:'5rem',boxShadow: '0px 3px 1px -2px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 1px 5px 0px rgba(0, 0, 0, 0.12)'}} >
           <div className='divLogo'>
                 <Avatar>
                     <PersonAddRoundedIcon/>
@@ -96,7 +96,7 @@ const CrearRegistroRapido = () => {
                   <Field type="password" name="confirmPassword" className="form-control" />
                   <ErrorMessage name="confirmPassword" className='error-message'>{msg => <div className='error-message'>{msg}</div>}</ErrorMessage>
 
-                <button type="submit">
+                <button type="submit" style={{marginBottom:'2rem'}}>
                   REGISTRARSE
                 </button>
               </Form>
